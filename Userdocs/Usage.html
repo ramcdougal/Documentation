@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>How to use this documentation &#8212; NeuroML Documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/zcustom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting started with NeuroML" href="GettingStarted.html" />
+    <link rel="prev" title="Mission and Aims" href="MissionAndAims.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroML Documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  User documentation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="MissionAndAims.html">
+   Mission and Aims
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   How to use this documentation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="GettingStarted.html">
+   Getting started with NeuroML
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SingleNeuronExample.html">
+     Simulating a regular spiking Izhikevich neuron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="NML2_examples/SingleNeuron.html">
+     Interactive single Izhikevich neuron NeuroML example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="IzhikevichNetworkExample.html">
+     A two population network of regular spiking Izhikevich neurons
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="NML2_examples/IzhikevichNetwork.html">
+     Interactive two population network example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="SingleCompartmentHHExample.html">
+     Simulating a single compartment Hodgkin-Huxley neuron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="NML2_examples/HH_single_compartment.html">
+     Interactive single compartment HH example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="MultiCompartmentOLMexample.html">
+     Simulating a multi compartment OLM neuron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="NML2_examples/OLM.html">
+     Interactive multi-compartment OLM cell example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FindingNeuroMLModels.html">
+   Finding and sharing NeuroML models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CreatingNeuroMLModels.html">
+   Creating NeuroML models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ValidatingNeuroMLModels.html">
+   Validating NeuroML Models
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="VisualisingNeuroMLModels.html">
+   Visualising NeuroML Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="VisualisingChannels.html">
+     Visualising and analysing ion channel models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="SimulatingNeuroMLModels.html">
+   Simulating NeuroML Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="OptimisingNeuroMLModels.html">
+   Optimising/fitting NeuroML Models
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Specification.html">
+   Schema/Specification
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="NeuroMLv2.html">
+     NeuroML v2
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/NeuroMLCoreDimensions.html">
+       NeuroMLCoreDimensions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/NeuroMLCoreCompTypes.html">
+       NeuroMLCoreCompTypes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/Cells.html">
+       Cells
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/Channels.html">
+       Channels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/Synapses.html">
+       Synapses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/Inputs.html">
+       Inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/Networks.html">
+       Networks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/PyNN.html">
+       PyNN
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Schemas/Simulation.html">
+       Simulation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="NeuroMLv1.html">
+     NeuroML v1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="UsingNeuroMLv2AndLEMS.html">
+   Using NeuroML 2 and LEMS
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Conventions.html">
+     Conventions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="UnitsAndDimensions.html">
+     Units and dimensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Paths.html">
+     Paths
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="QuantitiesAndRecording.html">
+     Quantities and recording
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="LEMSSimulation.html">
+     LEMS Simulation files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ExtendingNeuroMLv2WithLEMS.html">
+     Extending NeuroML with LEMS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Software/Software.html">
+   Software and Tools
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/pyNeuroML.html">
+     pyNeuroML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/libNeuroML.html">
+     libNeuroML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/pyLEMS.html">
+     pyLEMS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/NeuroMLlite.html">
+     NeuroMLlite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/jNeuroML.html">
+     jNeuroML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/jLEMS.html">
+     jLEMS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/NeuroML_API.html">
+     NeuroML C++ API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Software/MatLab.html">
+     MatLab NeuroML Toolbox
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="Software/SupportingTools.html">
+     Tools and resources with NeuroML support
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/Approaches.html">
+       Approaches to adding NeuroML support
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/NEURON.html">
+       NEURON and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/NetPyNE.html">
+       NetPyNE and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/PyNN.html">
+       PyNN and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/Brian.html">
+       Brian and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/MOOSE.html">
+       MOOSE and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/EDEN.html">
+       EDEN and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Software/Tools/Arbor.html">
+       Arbor and NeuroML
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Publications.html">
+   Citing NeuroML and related publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FAQ.html">
+   Frequently asked questions (FAQ)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  NeuroML events
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Events/20220630-CNS2022.html">
+   June 2022: NeuroML tutorial at CNS*2022 satellite tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Events/202204-Harmony.html">
+   April 2022: NeuroML development workshop at HARMONY 2022
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Events/202109-COMBINE.html">
+   October 2021: NeuroML development workshop at COMBINE meeting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Events/202108-INCF-Training-Week.html">
+   August 2021: NeuroML tutorial at INCF Training Weeks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Events/202107-CNS2021.html">
+   July 2021: NeuroML tutorial at CNS*2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Events/202103-Harmony.html">
+   March 2021: NeuroML hackathon at HARMONY 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Events/PastEvents.html">
+   Past NeuroML Events
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The NeuroML Initiative
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NeuroMLOrg/CommunicationChannels.html">
+   Getting in touch
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NeuroMLOrg/Standards.html">
+   Overview of standards in neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NeuroMLOrg/History.html">
+   A brief history of NeuroML
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../NeuroMLOrg/Board.html">
+   NeuroML Editorial Board
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../NeuroMLOrg/BoardHistory.html">
+     History of the NeuroML Editorial Board
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../NeuroMLOrg/BoardMeetingReports.html">
+     Workshop and Meeting reports
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NeuroMLOrg/ScientificCommittee.html">
+   NeuroML Scientific Committee
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NeuroMLOrg/Funding.html">
+   Funding and Acknowledgements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NeuroMLOrg/Contributors.html">
+   NeuroML contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NeuroMLOrg/CoC.html">
+   Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developer documentation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Devdocs/Devdocs.html">
+   Overview
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Devdocs/DevSOP.html">
+     Contribution guidelines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Devdocs/ReleaseProcess.html">
+     Release Process
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Devdocs/UpdatingStandard.html">
+     Making changes to the NeuroML standard
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Devdocs/InteractionOtherBits.html">
+   Interaction with other languages and standards
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Reference/Glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Reference/zBibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/NeuroML/Documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/NeuroML/Documentation/issues/new?title=Issue%20on%20page%20%2FUserdocs/Usage.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/NeuroML/Documentation/edit/master/source/Userdocs/Usage.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Userdocs/Usage.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-and-navigation">
+   Structure and navigation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-jupyter-notebooks-included-in-the-documentation">
+   Using Jupyter notebooks included in the documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloading-jupyter-notebooks-to-run-locally-on-your-machine">
+     Downloading Jupyter Notebooks to run locally on your machine
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reporting-bugs-and-issues">
+   Reporting bugs and issues
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>How to use this documentation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-and-navigation">
+   Structure and navigation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-jupyter-notebooks-included-in-the-documentation">
+   Using Jupyter notebooks included in the documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloading-jupyter-notebooks-to-run-locally-on-your-machine">
+     Downloading Jupyter Notebooks to run locally on your machine
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reporting-bugs-and-issues">
+   Reporting bugs and issues
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-use-this-documentation">
+<span id="userdocs-usage"></span><h1>How to use this documentation<a class="headerlink" href="#how-to-use-this-documentation" title="Permalink to this headline">#</a></h1>
+<p>This documentation is generated using <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter books</a>.
+You can learn more about the project on their website.</p>
+<section id="structure-and-navigation">
+<span id="userdocs-usage-structure"></span><h2>Structure and navigation<a class="headerlink" href="#structure-and-navigation" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Close the left hand side bar by clicking the left facing arrow in the top panel.</p>
+<p>You can close the left hand side bar by clicking the left facing arrow in the top panel.
+This increases the width of the middle section of the documentation and can be helpful on smaller screens.
+You can click the hamburger menu that replaces the left facing arrow to open the left hand side bar when required.</p>
+</div>
+<p>The documentation is divided into a few parts that can be seen in the <em>left hand side navigation bar</em>:</p>
+<ul class="simple">
+<li><p><strong>User documentation</strong>: this includes documentation for anyone looking to use NeuroML</p></li>
+<li><p><strong>NeuroML events</strong>: any events related to NeuroML will be listed here</p></li>
+<li><p><strong>The NeuroML Initiative</strong>: this includes documentation on the NeuroML community</p></li>
+<li><p><strong>Developer documentation</strong>: this includes information for individuals looking to contribute to NeuroML (either the standard or the software)</p></li>
+<li><p><strong>Reference</strong>: this includes the glossary of terms and the bibliography.</p></li>
+</ul>
+<p>Each part contains different chapters, which can each contain different sections.
+Each page in the documentation also has its own navigation in the <em>right hand side bar</em>.</p>
+</section>
+<section id="using-jupyter-notebooks-included-in-the-documentation">
+<span id="userdocs-usage-jupyterbooks"></span><h2>Using Jupyter notebooks included in the documentation<a class="headerlink" href="#using-jupyter-notebooks-included-in-the-documentation" title="Permalink to this headline">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Familiar with Jupyter Notebooks? Skip ahead to the next section.</p>
+<p>If you are familiar with Jupyter Notebooks, you can skip ahead to the <a class="reference internal" href="GettingStarted.html#userdocs-getting-started-neuroml"><span class="std std-ref">Getting started with NeuroML</span></a> section.</p>
+</div>
+<p>The most important feature of Jupyter books is that it allows you to include <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html">Jupyter notebooks</a> in the documentation.
+This allows us to write documentation which includes code examples that can be modified and executed by users interactively in their browsers <em>without having to install anything on their local machines</em>.
+For example, these are used in the <a class="reference internal" href="GettingStarted.html#userdocs-getting-started-neuroml"><span class="std std-ref">Getting Started</span></a> section.</p>
+<p>Each Jupyter notebook in the documentation includes a rocket icon 🚀 in the top bar:</p>
+<figure class="align-center" id="id1">
+<img alt="Click the rocket icon in top panel of executable pages to execute them in Binder or Google Collaboratory." src="../_images/izhikevich-rocket.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Click the rocket icon in top panel of executable pages to execute them in Binder or Google Collaboratory.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Clicking this icon will allow you to run the Jupyter Notebook:</p>
+<figure class="align-center" id="id2">
+<img alt="You can run the Jupyter Notebook on Binder or Google Colaboratory." src="../_images/izhikevich-rocket-options.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">You can run the Jupyter Notebook on Binder or Google Colaboratory.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You can choose from freely available services such as <a class="reference external" href="https://mybinder.org/">Binder</a> and <a class="reference external" href="https://colab.research.google.com/">Google Colaboratory</a>.
+Both Binder and Google Colaboratory will take you to these services and load the Jupyter Notebook for you to use.
+The Live code option uses Binder but allows you to run the code in the current tab itself.
+However, please note that this option does not include the full Jupyter Notebook features that Binder and Google Colaboratory provide.</p>
+<div class="tip admonition">
+<p class="admonition-title">Run Binder and Google Colaboratory in a new tab.</p>
+<p>It is suggested to right click and select “Open in new tab” so that the tab with the NeuroML documentation remains open.
+In most browsers, you can also use <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">click</span></code> to open links in a new tab:</p>
+</div>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/izhikevich-binder.png"><img alt="Izhikevich example running in Binder." src="../_images/izhikevich-binder.png" style="width: 576.0px; height: 289.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Izhikevich example running in Binder</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/izhikevich-google.png"><img alt="Izhikevich example running in Google Colaboratory." src="../_images/izhikevich-google.png" style="width: 576.0px; height: 289.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Izhikevich example running in Google Colaboratory.</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/izhikevich-livecode.png"><img alt="Izhikevich example running on Binder but using the Live Code option." src="../_images/izhikevich-livecode.png" style="width: 576.0px; height: 289.2px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Izhikevich example running in Binder but using the Live Code option.</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>When running the Jupyter notebooks using these services, you can make changes to the code and re-run it as required.
+On Binder and Google Colaboratory, which provide the full range of Jupyter Notebook features, you can also run all the code cells at once in sequence.
+Please see the documentation pages to learn more about using Binder and Google Colaboratory <a class="reference external" href="https://mybinder.readthedocs.io/en/latest/">here</a> and <a class="reference external" href="https://colab.research.google.com/notebooks/basic_features_overview.ipynb">here</a> respectively.
+General information on using Jupyter Notebooks and the interface can be found in the documentation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#starting-the-notebook-server">here</a>.</p>
+<section id="downloading-jupyter-notebooks-to-run-locally-on-your-machine">
+<span id="userdocs-usage-jupyterbooks-locally"></span><h3>Downloading Jupyter Notebooks to run locally on your machine<a class="headerlink" href="#downloading-jupyter-notebooks-to-run-locally-on-your-machine" title="Permalink to this headline">#</a></h3>
+<p>Jupyter Notebooks can also be downloaded and run locally on your machine.
+To download the notebooks, use the Download link in the top panel:</p>
+<figure class="align-center" id="id6">
+<img alt="Jupyter notebooks can be downloaded using the Download link in the top panel." src="../_images/jupyter-download.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Jupyter notebooks can be downloaded using the Download link in the top panel.</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You will need to install the Python Jupyter Notebook packages to do so.
+Please refer to the Jupyter Notebook <a class="reference external" href="https://jupyter.readthedocs.io/en/latest/install/notebook-classic.html#alternative-for-experienced-python-users-installing-jupyter-with-pip">documentation</a> to see how you can install Jupyter Notebooks.
+Additionally, you will also need to install the <a class="reference internal" href="Software/Software.html#userdocs-software"><span class="std std-ref">NeuroML software</span></a> to run these notebooks.
+Information on using Jupyter Notebooks and the interface can be found in the documentation <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#starting-the-notebook-server">here</a>.</p>
+</section>
+</section>
+<section id="reporting-bugs-and-issues">
+<span id="userdocs-usage-bugs"></span><h2>Reporting bugs and issues<a class="headerlink" href="#reporting-bugs-and-issues" title="Permalink to this headline">#</a></h2>
+<p>Please report any issues that you may find in the documentation so that it can be improved.
+To report an issue on a particular page, you can use the “open issue” link under the GitHub icon in the top panel.
+Additionally, you can also suggest edits by editing the page in a fork and opening a pull request using the “suggest and edit” link.</p>
+<figure class="align-center" id="id7">
+<img alt="You can report issues and suggest edits to the documentation to help us improve it using the options in the GitHub icon in the top panel." src="../_images/jupyterbook-issue.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">You can report issues and suggest edits to the documentation to help us improve it using the options in the GitHub icon in the top panel.</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>You can also always contact the NeuroML community using our <a class="reference internal" href="../NeuroMLOrg/CommunicationChannels.html#contact"><span class="std std-ref">communication channels</span></a> if required.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NeuroML/Documentation",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Userdocs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="MissionAndAims.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Mission and Aims</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="GettingStarted.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Getting started with NeuroML</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroML contributors<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

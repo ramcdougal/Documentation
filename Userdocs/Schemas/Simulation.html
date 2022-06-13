@@ -1,0 +1,1344 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Simulation &#8212; NeuroML Documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/zcustom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="NeuroML v1" href="../NeuroMLv1.html" />
+    <link rel="prev" title="PyNN" href="PyNN.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroML Documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  User documentation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../MissionAndAims.html">
+   Mission and Aims
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Usage.html">
+   How to use this documentation
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../GettingStarted.html">
+   Getting started with NeuroML
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SingleNeuronExample.html">
+     Simulating a regular spiking Izhikevich neuron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../NML2_examples/SingleNeuron.html">
+     Interactive single Izhikevich neuron NeuroML example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../IzhikevichNetworkExample.html">
+     A two population network of regular spiking Izhikevich neurons
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../NML2_examples/IzhikevichNetwork.html">
+     Interactive two population network example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../SingleCompartmentHHExample.html">
+     Simulating a single compartment Hodgkin-Huxley neuron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../NML2_examples/HH_single_compartment.html">
+     Interactive single compartment HH example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../MultiCompartmentOLMexample.html">
+     Simulating a multi compartment OLM neuron
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../NML2_examples/OLM.html">
+     Interactive multi-compartment OLM cell example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../FindingNeuroMLModels.html">
+   Finding and sharing NeuroML models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../CreatingNeuroMLModels.html">
+   Creating NeuroML models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ValidatingNeuroMLModels.html">
+   Validating NeuroML Models
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../VisualisingNeuroMLModels.html">
+   Visualising NeuroML Models
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../VisualisingChannels.html">
+     Visualising and analysing ion channel models
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../SimulatingNeuroMLModels.html">
+   Simulating NeuroML Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OptimisingNeuroMLModels.html">
+   Optimising/fitting NeuroML Models
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../Specification.html">
+   Schema/Specification
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="../NeuroMLv2.html">
+     NeuroML v2
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="NeuroMLCoreDimensions.html">
+       NeuroMLCoreDimensions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="NeuroMLCoreCompTypes.html">
+       NeuroMLCoreCompTypes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Cells.html">
+       Cells
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Channels.html">
+       Channels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Synapses.html">
+       Synapses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Inputs.html">
+       Inputs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="Networks.html">
+       Networks
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="PyNN.html">
+       PyNN
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Simulation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../NeuroMLv1.html">
+     NeuroML v1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../UsingNeuroMLv2AndLEMS.html">
+   Using NeuroML 2 and LEMS
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Conventions.html">
+     Conventions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../UnitsAndDimensions.html">
+     Units and dimensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Paths.html">
+     Paths
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../QuantitiesAndRecording.html">
+     Quantities and recording
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../LEMSSimulation.html">
+     LEMS Simulation files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ExtendingNeuroMLv2WithLEMS.html">
+     Extending NeuroML with LEMS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Software/Software.html">
+   Software and Tools
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/pyNeuroML.html">
+     pyNeuroML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/libNeuroML.html">
+     libNeuroML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/pyLEMS.html">
+     pyLEMS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/NeuroMLlite.html">
+     NeuroMLlite
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/jNeuroML.html">
+     jNeuroML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/jLEMS.html">
+     jLEMS
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/NeuroML_API.html">
+     NeuroML C++ API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Software/MatLab.html">
+     MatLab NeuroML Toolbox
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../Software/SupportingTools.html">
+     Tools and resources with NeuroML support
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/Approaches.html">
+       Approaches to adding NeuroML support
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/NEURON.html">
+       NEURON and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/NetPyNE.html">
+       NetPyNE and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/PyNN.html">
+       PyNN and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/Brian.html">
+       Brian and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/MOOSE.html">
+       MOOSE and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/EDEN.html">
+       EDEN and NeuroML
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../Software/Tools/Arbor.html">
+       Arbor and NeuroML
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Publications.html">
+   Citing NeuroML and related publications
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../FAQ.html">
+   Frequently asked questions (FAQ)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  NeuroML events
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Events/20220630-CNS2022.html">
+   June 2022: NeuroML tutorial at CNS*2022 satellite tutorials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Events/202204-Harmony.html">
+   April 2022: NeuroML development workshop at HARMONY 2022
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Events/202109-COMBINE.html">
+   October 2021: NeuroML development workshop at COMBINE meeting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Events/202108-INCF-Training-Week.html">
+   August 2021: NeuroML tutorial at INCF Training Weeks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Events/202107-CNS2021.html">
+   July 2021: NeuroML tutorial at CNS*2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Events/202103-Harmony.html">
+   March 2021: NeuroML hackathon at HARMONY 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Events/PastEvents.html">
+   Past NeuroML Events
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  The NeuroML Initiative
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NeuroMLOrg/CommunicationChannels.html">
+   Getting in touch
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NeuroMLOrg/Standards.html">
+   Overview of standards in neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NeuroMLOrg/History.html">
+   A brief history of NeuroML
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../NeuroMLOrg/Board.html">
+   NeuroML Editorial Board
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../NeuroMLOrg/BoardHistory.html">
+     History of the NeuroML Editorial Board
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../NeuroMLOrg/BoardMeetingReports.html">
+     Workshop and Meeting reports
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NeuroMLOrg/ScientificCommittee.html">
+   NeuroML Scientific Committee
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NeuroMLOrg/Funding.html">
+   Funding and Acknowledgements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NeuroMLOrg/Contributors.html">
+   NeuroML contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NeuroMLOrg/CoC.html">
+   Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Developer documentation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../Devdocs/Devdocs.html">
+   Overview
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Devdocs/DevSOP.html">
+     Contribution guidelines
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Devdocs/ReleaseProcess.html">
+     Release Process
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../Devdocs/UpdatingStandard.html">
+     Making changes to the NeuroML standard
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Devdocs/InteractionOtherBits.html">
+   Interaction with other languages and standards
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Reference/Glossary.html">
+   Glossary
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Reference/zBibliography.html">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/NeuroML/Documentation"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/NeuroML/Documentation/issues/new?title=Issue%20on%20page%20%2FUserdocs/Schemas/Simulation.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/NeuroML/Documentation/edit/master/source/Userdocs/Schemas/Simulation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/Userdocs/Schemas/Simulation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Simulation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display">
+   Display
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#line">
+   Line
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outputfile">
+   OutputFile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outputcolumn">
+   OutputColumn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eventoutputfile">
+   EventOutputFile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eventselection">
+   EventSelection
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Simulation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Simulation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display">
+   Display
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#line">
+   Line
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outputfile">
+   OutputFile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outputcolumn">
+   OutputColumn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eventoutputfile">
+   EventOutputFile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eventselection">
+   EventSelection
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="simulation">
+<span id="schema-simulation"></span><h1>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">#</a></h1>
+<p><strong>Specification of the LEMS Simulation element which is normally used to define simulations of NeuroML2 files. Note: not actually part of NeuroML v2, but this is required by much of the NeuroML toolchain for defining Simulations ( which NeuroML model to use and how long to run for ), as well as what to  <a class="reference internal" href="#schema-display"><span class="std std-ref">Display</span></a> and what to save in  <a class="reference internal" href="#schema-outputfile"><span class="std std-ref">OutputFile</span></a>s.</strong></p>
+<hr class="docutils" />
+<p>Original ComponentType definitions: <a class="reference external" href="https://github.com/NeuroML/NeuroML2/blob/master/NeuroML2CoreTypes//Simulation.xml">Simulation.xml</a>.
+Schema against which NeuroML based on these should be valid: <a class="reference external" href="https://github.com/NeuroML/NeuroML2/tree/master/Schemas/NeuroML2/NeuroML_v2.2.xsd">NeuroML_v2.2.xsd</a>.
+Generated on 07/06/22 from <a class="reference external" href="https://github.com/NeuroML/NeuroML2/commit/2c397d00bd4b9aa03313165777d6ca4cfa437755">this</a> commit.
+Please file any issues or questions at the <a class="reference external" href="https://github.com/NeuroML/NeuroML2/issues">issue tracker here</a>.</p>
+<hr class="docutils" />
+<section id="id1">
+<span id="id2"></span><h2>Simulation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p><i>The main element in a LEMS Simulation file. Defines the <strong>length</strong> of simulation, the timestep ( dt ) <strong>step</strong> and an optional <strong>seed</strong> to use for stochastic elements, as well as  <a class="reference internal" href="#schema-display"><span class="std std-ref">Display</span></a>s,  <a class="reference internal" href="#schema-outputfile"><span class="std std-ref">OutputFile</span></a>s and  <a class="reference internal" href="#schema-eventoutputfile"><span class="std std-ref">EventOutputFile</span></a>s to record. Specifies a <strong>target</strong> component to run, usually the id of a  <a class="reference internal" href="Networks.html#schema-network"><span class="std std-ref">network</span></a>.</i></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="c0bc56e2-512c-4f94-98d7-5040f0d4bc4c" name="777f47fc-a919-4204-b680-1f43209211a3" type="radio">
+</input><label class="sd-tab-label" for="c0bc56e2-512c-4f94-98d7-5040f0d4bc4c">
+Parameters</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>length</strong></p></td>
+<td><p>Duration of the simulation run</p></td>
+<td><p><a class="reference internal" href="NeuroMLCoreDimensions.html#schema-dimensions-time"><span class="std std-ref">time</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>step</strong></p></td>
+<td><p>Time step (dt) to use in the simulation</p></td>
+<td><p><a class="reference internal" href="NeuroMLCoreDimensions.html#schema-dimensions-time"><span class="std std-ref">time</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="f5c31da0-d045-430e-8767-1fce6adbeb22" name="777f47fc-a919-4204-b680-1f43209211a3" type="radio">
+</input><label class="sd-tab-label" for="f5c31da0-d045-430e-8767-1fce6adbeb22">
+Text fields</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>seed</strong></p></td>
+<td><p>The seed to use in the random number generator for stochastic entities</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="19df4e50-7135-4a19-8fba-cf6978f10c68" name="777f47fc-a919-4204-b680-1f43209211a3" type="radio">
+</input><label class="sd-tab-label" for="19df4e50-7135-4a19-8fba-cf6978f10c68">
+Component References</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>target</strong></p></td>
+<td></td>
+<td><p><span class="xref std std-ref">schema:component</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="87c76096-1c38-4379-bdbe-7566e2ea2d18" name="777f47fc-a919-4204-b680-1f43209211a3" type="radio">
+</input><label class="sd-tab-label" for="87c76096-1c38-4379-bdbe-7566e2ea2d18">
+Children list</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>displays</strong></p></td>
+<td></td>
+<td><p><a class="reference internal" href="#schema-display"><span class="std std-ref">Display</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>outputs</strong></p></td>
+<td></td>
+<td><p><a class="reference internal" href="#schema-outputfile"><span class="std std-ref">OutputFile</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>events</strong></p></td>
+<td></td>
+<td><p><a class="reference internal" href="#schema-eventoutputfile"><span class="std std-ref">EventOutputFile</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="d3774985-df3a-43f5-93ab-a5a381198606" name="777f47fc-a919-4204-b680-1f43209211a3" type="radio">
+</input><label class="sd-tab-label" for="d3774985-df3a-43f5-93ab-a5a381198606">
+Dynamics</label><div class="sd-tab-content docutils">
+<dl class="simple myst">
+<dt><i><strong>State Variables</strong></i></dt><dd><p><strong>t</strong>: <a class="reference internal" href="NeuroMLCoreDimensions.html#schema-dimensions-time"><span class="std std-ref">time</span></a></p>
+</dd>
+</dl>
+</div>
+</div>
+</section>
+<section id="display">
+<span id="schema-display"></span><h2>Display<a class="headerlink" href="#display" title="Permalink to this headline">#</a></h2>
+<p><i>Details of a display to generate ( usually a set of traces given by  <a class="reference internal" href="#schema-line"><span class="std std-ref">Line</span></a>s in a newly opened window ) on completion of the simulation.</i></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="dfa57225-26be-4539-9504-42434c0e8f86" name="a4cd93f4-bc7d-4fc4-b306-a7e7f4fba975" type="radio">
+</input><label class="sd-tab-label" for="dfa57225-26be-4539-9504-42434c0e8f86">
+Parameters</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>timeScale</strong></p></td>
+<td><p>A scaling of the time axis, e.g. 1ms means display in milliseconds. Note: all quantities are recorded in SI units</p></td>
+<td><p><a class="reference internal" href="NeuroMLCoreDimensions.html#schema-dimensions-time"><span class="std std-ref">time</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>xmax</strong></p></td>
+<td><p>The maximum value on the x axis (i.e time variable) of the display</p></td>
+<td><p>Dimensionless</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>xmin</strong></p></td>
+<td><p>The minimum value on the x axis (i.e time variable) of the display</p></td>
+<td><p>Dimensionless</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ymax</strong></p></td>
+<td><p>The maximum value on the x axis of the display</p></td>
+<td><p>Dimensionless</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ymin</strong></p></td>
+<td><p>The minimum value on the y axis of the display</p></td>
+<td><p>Dimensionless</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="12931668-7897-4ee3-bfc3-2eab14470eff" name="a4cd93f4-bc7d-4fc4-b306-a7e7f4fba975" type="radio">
+</input><label class="sd-tab-label" for="12931668-7897-4ee3-bfc3-2eab14470eff">
+Text fields</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>title</strong></p></td>
+<td><p>The title of the display, e.g. to use for the window</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="bc11f31e-dfae-4205-b466-ee3cb8a59ab8" name="a4cd93f4-bc7d-4fc4-b306-a7e7f4fba975" type="radio">
+</input><label class="sd-tab-label" for="bc11f31e-dfae-4205-b466-ee3cb8a59ab8">
+Children list</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>lines</strong></p></td>
+<td></td>
+<td><p><a class="reference internal" href="#schema-line"><span class="std std-ref">Line</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="line">
+<span id="schema-line"></span><h2>Line<a class="headerlink" href="#line" title="Permalink to this headline">#</a></h2>
+<p><i>Specification of a single time varying <strong>quantity</strong> to plot on the  <a class="reference internal" href="#schema-display"><span class="std std-ref">Display</span></a>. Note that all quantities are handled internally in LEMS in SI units, and so a <strong>scale</strong> should be used if it is to be displayed in other units.</i></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="a3ae6a2f-56a9-412c-8ba4-82750f0af718" name="12701b5e-8740-46fc-a42c-e83410070213" type="radio">
+</input><label class="sd-tab-label" for="a3ae6a2f-56a9-412c-8ba4-82750f0af718">
+Parameters</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>scale</strong></p></td>
+<td><p>A scaling factor to DIVIDE the quantity by. Can be dimensional, so using scale=1mV means a value of -0.07V is displayed as -70. Alternatively, scale=0.001 would achieve the same thing.</p></td>
+<td><p><a class="reference internal" href="NeuroMLCoreDimensions.html#schema-dimensions"><span class="std std-ref">Dimensions</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>timeScale</strong></p></td>
+<td><p>An optional scaling of the time axis, e.g. 1ms means display in milliseconds. Note: if present, this overrides timeScale from <em>Display</em></p></td>
+<td><p><a class="reference internal" href="NeuroMLCoreDimensions.html#schema-dimensions"><span class="std std-ref">Dimensions</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="aaf35fa6-22a7-4531-92cf-d086a3dc4f2b" name="12701b5e-8740-46fc-a42c-e83410070213" type="radio">
+</input><label class="sd-tab-label" for="aaf35fa6-22a7-4531-92cf-d086a3dc4f2b">
+Text fields</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>color</strong></p></td>
+<td><p>A hex string for the color to display the trace for this quantity, e.g. #aa33ff</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="ab2797a5-0788-4c73-84c8-5fbc16dadcdb" name="12701b5e-8740-46fc-a42c-e83410070213" type="radio">
+</input><label class="sd-tab-label" for="ab2797a5-0788-4c73-84c8-5fbc16dadcdb">
+Paths</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>quantity</strong></p></td>
+<td><p>Path to the quantity to display, see see <a class="reference external" href="https://docs.neuroml.org/Userdocs/Paths.html">https://docs.neuroml.org/Userdocs/Paths.html</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="outputfile">
+<span id="schema-outputfile"></span><h2>OutputFile<a class="headerlink" href="#outputfile" title="Permalink to this headline">#</a></h2>
+<p><i>A file in which to save recorded values from the simulation.</i></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="3fad8728-b6a3-4417-b643-b7dfe0238efb" name="e70f345c-f401-43fc-a4c9-d5e514241efe" type="radio">
+</input><label class="sd-tab-label" for="3fad8728-b6a3-4417-b643-b7dfe0238efb">
+Text fields</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>path</strong></p></td>
+<td><p>Optional path to the directory in which to store the file</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>fileName</strong></p></td>
+<td><p>Name of the file to generate. Can include a relative path (from the LEMS Simulation file location).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="1f5a8118-e404-4573-a217-b9e6b487497a" name="e70f345c-f401-43fc-a4c9-d5e514241efe" type="radio">
+</input><label class="sd-tab-label" for="1f5a8118-e404-4573-a217-b9e6b487497a">
+Children list</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>outputColumn</strong></p></td>
+<td></td>
+<td><p><a class="reference internal" href="#schema-outputcolumn"><span class="std std-ref">OutputColumn</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="outputcolumn">
+<span id="schema-outputcolumn"></span><h2>OutputColumn<a class="headerlink" href="#outputcolumn" title="Permalink to this headline">#</a></h2>
+<p><i>Specification of a single time varying <strong>quantity</strong> to record during the simulation. Note that all quantities are handled internally in LEMS in SI units, and so the value for the quantity in the file ( as well as time ) will be in SI units.</i></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="243fae32-fc2e-47d9-8564-8a3b0f2b7f31" name="5147c2a7-b237-49fa-b04d-49f898cd2553" type="radio">
+</input><label class="sd-tab-label" for="243fae32-fc2e-47d9-8564-8a3b0f2b7f31">
+Paths</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>quantity</strong></p></td>
+<td><p>Path to the quantity to save, see see <a class="reference external" href="https://docs.neuroml.org/Userdocs/Paths.html">https://docs.neuroml.org/Userdocs/Paths.html</a>. Note that all quantities are saved in SI units.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="eventoutputfile">
+<span id="schema-eventoutputfile"></span><h2>EventOutputFile<a class="headerlink" href="#eventoutputfile" title="Permalink to this headline">#</a></h2>
+<p><i>A file in which to save event information ( e.g. spikes from cells in a population ) in a specified <strong>format</strong>.</i></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="6b14dddf-f8eb-4752-8e8e-187ef2bb16c7" name="9c2aede6-f154-4308-af60-192456203b01" type="radio">
+</input><label class="sd-tab-label" for="6b14dddf-f8eb-4752-8e8e-187ef2bb16c7">
+Text fields</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>path</strong></p></td>
+<td><p>Optional path to the directory in which to store the file</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>fileName</strong></p></td>
+<td><p>Name of the file to generate. Can include a relative path (from the LEMS Simulation file location).</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>format</strong></p></td>
+<td><p>Takes values TIME_ID or ID_TIME, depending on the preferred order of the time or event id (from <em>EventSelection</em>) in each row of the file</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="2d680ca7-9875-4aaf-a7bd-0e69822f17b8" name="9c2aede6-f154-4308-af60-192456203b01" type="radio">
+</input><label class="sd-tab-label" for="2d680ca7-9875-4aaf-a7bd-0e69822f17b8">
+Children list</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 70%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>eventSelection</strong></p></td>
+<td></td>
+<td><p><a class="reference internal" href="#schema-eventselection"><span class="std std-ref">EventSelection</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="eventselection">
+<span id="schema-eventselection"></span><h2>EventSelection<a class="headerlink" href="#eventselection" title="Permalink to this headline">#</a></h2>
+<p><i>A specific source of events with an associated <strong>id,</strong> which will be recorded inside the file specified in the parent  <a class="reference internal" href="#schema-eventoutputfile"><span class="std std-ref">EventOutputFile</span></a>. The attribute <strong>select</strong> should point to a cell inside a  <a class="reference internal" href="Networks.html#schema-population"><span class="std std-ref">population</span></a> ( e.g. hhpop[0], see <a class="reference external" href="https://docs.neuroml.org/Userdocs/Paths.html">https://docs.neuroml.org/Userdocs/Paths.html</a> ), and the <strong>eventPort</strong> specifies the port for the emitted events, which usually has id: spike. Note: the <strong>id</strong> used on this element ( and appearing in the file alongside the event time ) can be different from the id/index of the cell in the population.</i></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="2aa32c99-b3ec-4fff-8d3a-3bba8b9cfc21" name="f63fdec1-5a1b-4c9e-969c-34ba49160530" type="radio">
+</input><label class="sd-tab-label" for="2aa32c99-b3ec-4fff-8d3a-3bba8b9cfc21">
+Text fields</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>eventPort</strong></p></td>
+<td><p>The port on the cell which generates the events, usually: spike</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="2d6bf5a1-bf69-453e-afc1-6f780007180c" name="f63fdec1-5a1b-4c9e-969c-34ba49160530" type="radio">
+</input><label class="sd-tab-label" for="2d6bf5a1-bf69-453e-afc1-6f780007180c">
+Paths</label><div class="sd-tab-content docutils">
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 88%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>select</strong></p></td>
+<td><p>The cell which will be emitting the events</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "NeuroML/Documentation",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Userdocs/Schemas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="PyNN.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">PyNN</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../NeuroMLv1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NeuroML v1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroML contributors<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
